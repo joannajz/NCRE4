@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+{%block title%}计算机四级题库练习{%endblock%}
+{%block body %}
+    <div style="color:grey;position: fixed;left: 0px;bottom: 0px;" > 
+       <input type="text" size="200" />
+    </div>
+    {% for val in qs %}
+       <div>
+          <h5>题目：{{val[1]}}</h4>  
+          <p>{{val[2]}}</p>
+          <p>{{val[3]}}</p>
+          <p>{{val[4]}}</p>
+          <p>{{val[5]}}</p>
+          <p>{{val[6]}}</p>
+          <a target="_blank"  href = "https://www.baidu.com/" ><button >点我跳转到百度</button ></a>
+       </div>
+    {% endfor %} 
+    <input type="button" value="下一页" onclick="javascrtpt:window.location.href='/practice/2'"/>
+    <input type="button" value="下一页" onclick="javascrtpt:window.location.href='/practice/3'"/>
+    <input type="button" value="下一页" onclick="javascrtpt:window.location.href='/practice/4'"/>
+    <p> {{qa[0][1]}} :{{qa[0][2]}}</p>
+    <p></p>
+    <!-- "alert('爱心发射 --》❤')" javascrtpt:window.location.href='/practive'+'window.location.search -->
+    
+{%endblock%}
